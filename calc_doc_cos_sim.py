@@ -5,7 +5,7 @@ import sys
 import pandas as pd
 import numpy as np
 import shutil
-from tfidf import DF_, IDF_, TFIDF_, TF_, set_folder_morph
+from module import DF_, IDF_, TFIDF_, TF_, set_folder_morph
 
 def cos_sim(v1, v2):
     return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))

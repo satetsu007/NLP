@@ -9,7 +9,7 @@ import os
 import sys
 from gensim import models
 import shutil
-from tfidf import set_folder_morph
+from module import set_folder_morph
 import pandas as pd
 
 argv = sys.argv

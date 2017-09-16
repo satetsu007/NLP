@@ -3,10 +3,7 @@
 from gensim import models
 import os
 import sys
-import numpy as np
-import pandas as pd
-import MeCab
-from tfidf import set_folder_morph
+from module import set_folder_morph
 
 corpus = "./corpus/"
 folder = sys.argv[1]
