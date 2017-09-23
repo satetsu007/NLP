@@ -189,6 +189,9 @@ def calc_similarity(folder, doc1, doc2):
     DOC_SIM_DF.index = label
     DOC_SIM_DF.columns = ["file_name", "text"] + tourist_spot
     
+    for tsp in tourist_spot:
+        DOC_SIM_DF[[tsp]] = DOC_SIM_DF[[tsp]].astype(float)
+    
     # 文書集合の類似度を出力
     # 1に近いほど似ている,0に近いほど似ていない
     DOC_SIM_DF.to_excel("./similarity/%s_%s.xlsx" % (doc1, doc2), encoding="shift-jis")
