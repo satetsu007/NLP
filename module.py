@@ -15,7 +15,7 @@ mode=Falseのときは副詞、名詞、形容詞、動詞を単語毎に分か�
 mode=Trueのときは形態素解析した結果を返す
 """
     if mode:
-        # 形態素解析した結果を格納するリストを作成   
+        # 形態素解析した結果を格納するリストを作成
         BOW = []
         # MeCabを使用して分かち書き処理を行うためにタグを指定
         t = MeCab.Tagger("-Owakati")
@@ -76,7 +76,6 @@ def set_folder_morph(folder):
     """フォルダ名を入力するとフォルダ内のテキストファイルを
 形態素解析してファイル名と解析結果を返す
 """
-    
     # フォルダ内のファイル名を取得
     # .txt形式のみ取得する
     filename = os.listdir(folder)
@@ -84,14 +83,13 @@ def set_folder_morph(folder):
     docs = [doc for doc in docs if not doc[0] =="."]
     # 形態素解析の結果を格納するリストを作成
     morph_list = []
-    
-    
+
     for doc in docs:
         # フォルダ内のファイルのパスを代入
         file_path = os.getcwd() + "/" + folder + "/" + doc
         # 形態素解析結果を追加
         morph_list.append(morph_analysis(file_path))
-    
+
     # 形態素解析とファイル名を返す
     return morph_list, docs
 
