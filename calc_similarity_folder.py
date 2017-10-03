@@ -389,7 +389,6 @@ def calc_similarity_text(folder, doc1, doc2):
             for f1 in spot_list[i]:
                 flag2 = start2
                 for f2 in tourist_spot_list[j]:
-                    print(flag2)
                     DOC_SIM[flag, flag2] += model[index].docvecs.similarity(d1=f1, d2=f2)
                     flag2 += 1
                 flag += 1
